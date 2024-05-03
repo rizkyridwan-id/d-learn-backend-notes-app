@@ -5,7 +5,6 @@ class NotesHandler {
 
   postNoteHandler(request, h) {
     try {
-      console.log(this._service);
       const { title = 'untitled', body, tags } = request.payload;
 
       const noteId = this._service.addNote({ title, body, tags });
